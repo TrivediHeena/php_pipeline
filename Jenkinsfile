@@ -8,7 +8,8 @@ pipeline {
         }
         stage('build'){
             steps{
-                bat 'php -S localhost:80 -t php_pipeline/'
+                //bat 'php -S localhost:80 -t php_pipeline/'
+                bat 'php *.php'
             }
         }
     }
