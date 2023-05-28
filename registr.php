@@ -3,7 +3,7 @@
 	$obj=new DemoReg();
 	$unm=$_POST['unm'];
 	$email=$_POST['email'];
-	$pwd=$_POST['pwd'];
+	$pwd=md5($_POST['pwd']);
 	$gender=$_POST['gender'];
 	$hobby=isset($_POST['reading'])?$_POST['reading']:"";
 	$hobby.=isset($_POST['writing'])?$_POST['writing']:"";

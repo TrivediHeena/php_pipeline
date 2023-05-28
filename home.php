@@ -10,15 +10,16 @@
 		header("location:login.php");
 	}
 	else{
-		echo "welcome, ".$_SESSION['unm'];
+		echo "<h2>welcome, ".$_SESSION['unm']."</h2>";
+		echo "<table>";
 		while ($row=mysqli_fetch_array($res)) {			
 			echo "<img src='".$row['img']."' width=120 height=120 alt='Pic'/>";
 			echo "<tr><td>".$row['email']."</td></tr>";
 			echo "<tr><td>".$row['gender']."</td></tr>";
 			echo "<tr><td>".$row['hobby']."</td></tr>";
 			echo "<tr><td>".$row['country']."</td></tr>";
-		}
-		echo "<a href=logout.php>Logout</a>";
+		}		
+		echo "</table><a href=logout.php>Logout</a>";
 	}
 	
 ?>
