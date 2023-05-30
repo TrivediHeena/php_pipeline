@@ -20,5 +20,16 @@ pipeline {
                     '''
             }
         }
+        stage('test'){
+            environment {
+                SCANNER_HOME = tool 'SonarQubeScanner'
+            }
+            steps{
+                withSonarQubeEnv('sonar test') {
+                    // some block
+                    bat 'sonar-scanner'
+                }
+            }
+        }
     }
 }
