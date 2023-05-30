@@ -25,7 +25,7 @@ pipeline {
                 SCANNER_HOME = tool 'SonarQubeScanner'
             }
             steps{
-                withSonarQubeEnv('sonar test') {
+                withSonarQubeEnv('SonarQube') {
                     // some block
                     bat 'sonar-scanner'
                 }
