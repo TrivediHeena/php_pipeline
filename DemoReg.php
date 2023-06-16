@@ -3,7 +3,7 @@
 		var $con,$res;
 		function __construct(){
 			try{
-				$this->con=mysqli_connect("localhost","root","","demo_reg")or die("Can't Connect");
+				$this->con=mysqli_connect("db","MYSQL_USER","MYSQL_PASSWORD","demo_reg")or die("Can't Connect");
 			}catch(exception $e){
 				echo "Exeption:".$e;
 			}

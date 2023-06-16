@@ -2,7 +2,7 @@
 	include_once("DemoReg.php");
 	$obj=new DemoReg();
 	$unm=$_POST['unm'];
-	$pwd=$_POST['pwd'];
+	$pwd=md5($_POST['pwd']);
 	$res=$obj->select("select unm,pwd from registration where unm='$unm' and pwd='$pwd'");
 	if(mysqli_num_rows($res)>0){
 		session_start();
